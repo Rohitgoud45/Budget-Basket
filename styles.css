@@ -1,0 +1,218 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Basic Setup */
+body {
+    font-family: 'sans-serif';
+    background-color: #000000;
+    color: #fffdfd;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 4.5rem;
+}
+
+.gradient-text {
+    background: linear-gradient(to left, #ff8a00, #e52e71);
+    opacity: 1;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Header Styling */
+header {
+    background: black;
+    opacity: 1;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Sticky Navigation Bar */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff8a00;
+}
+
+nav ul li a.active {
+    color: #e52e71; /* Highlight active link */
+}
+
+/* Main Section Styling */
+main {
+    padding: 50px 20px;
+}
+
+section {
+    display: none;
+    margin-bottom: 40px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+section#home {
+    display: block;
+    opacity: 1;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.0rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* CTA Button */
+.cta button {
+    background-color: #ff8a00;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.cta button:hover {
+    background-color: #e52e71;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta button:active {
+    transform: scale(0.98);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #ff8a00;
+    border: none;
+    color: rgb(255, 253, 254);
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e52e71;
+}
+
+form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+/* List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #000000;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(205, 140, 87);
+}
+
+/* Budget Display */
+#budget, #spent, #remaining {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    form input, form textarea {
+        width: 90%;
+    }
+}
+
+/* Footer (Optional) */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
