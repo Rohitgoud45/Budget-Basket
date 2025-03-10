@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>BudgetBasket - Smart Grocery Shopping</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <a href="#home"><img src="images/BudgetBasket (1).png" alt="BudgetBasket Logo" style="width: 200px; height: 200px; margin-left: 150px; margin-right: 120px;" ></a>
+            <h1 class="gradient-text" style="text-align: center">BudgetBasket</h1>
+        </div></div>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#features" onclick="showSection('features')">Features</a></li>
+                <li><a href="#download" onclick="showSection('download')">Download</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2 class="gradient-text">Welcome to BudgetBasket</h2>
+            <p>BudgetBasket offers personalized budgeting tools, intuitive price comparison features, and meal planning assistance, all tailored to help users stay within their budget while making informed financial decisions. By providing a seamless and user-friendly experience, BudgetBasket ensures that smart shopping is accessible to everyone.</p>
+            <p>Our mission at BudgetBasket is to make grocery shopping more manageable and affordable, helping users navigate through the complexities of budgeting with ease. We believe that everyone deserves the peace of mind that comes with knowing they are getting the best value for their money, and we're here to make that a reality.</p>
+            <p>Join the BudgetBasket community today and take the first step towards smarter, budget-friendly grocery shopping. Because at BudgetBasket, we understand that every penny counts.</p>
+            <div class="cta">
+                <button onclick="showSection('download')">Get Started</button>
+            </div>
+        </section>
+
+       
+        <section id="features" style="display: none;">
+            <h2 class="gradient-text">Key Features</h2>
+            <ul>
+                <li style="text-align: center; font-size: 1.2em;"><strong>Track Your Spending:</strong>
+                    <form id="budget-form">
+                        <label for="budget-input">Set Budget:</label>
+                        <input type="number" id="budget-input" required>
+                        <div style="text-align: center;">
+                        <button type="submit">Update Budget</button>
+                    </form>
+                    <div>Budget: <span id="budget">$0</span></div>
+                    <div>Spent: <span id="spent">$0</span></div>
+                    <div>Remaining: <span id="remaining">$0</span></div>
+                    <form id="expense-form">
+                        <label for="expense-input">Add Expense:</label>
+                        <input type="number" id="expense-input" required>
+                        <div style="text-align: center;">
+                        <button type="submit">Add</button>
+                    </form>
+                </li>
+                <li style="text-align: center; font-size: 1.2em;"><strong>Price Comparison:</strong>
+                    <form id="price-form">
+                        <label for="item-name">Item Name:</label>
+                        <input type="text" id="item-name" required>
+                        <label for="price">Price:</label>
+                        <input type="number" id="price" required>
+                        <label for="source">Source:</label>
+                        <input type="text" id="source" required>
+                        <div style="text-align: center;">
+                            <button type="submit">Add Price</button>
+                        </div></div>
+                    </form>
+                    <ul id="price-comparison"></ul>
+                </li>
+                <li style="text-align: center; font-size: 1.2em;"><strong>Meal Planning:</strong>
+                    <form id="meal-form">
+                        <label for="meal">Add Meal:</label>
+                        <input type="text" id="meal" required>
+                        <div style="text-align: center;">
+                        <button type="submit">Add Meal</button>
+                    </form>
+                    <ul id="meal-plan"></ul>
+                </li>
+                
+                <li style="text-align: center; font-size: 1.2em;"><strong>Smart Recommendations:</strong>
+                    <form id="recommendation-form">
+                        <label for="recommendation-input">Add Recommendation:</label>
+                        <input type="text" id="recommendation-input" required>
+                        <div style="text-align: center;">
+                            <button type="submit">Add</button>
+                    </form>
+                    <ul id="recommendations"></ul>
+                </li>
+                
+            </ul>
+        </section>
+        
+
+        <section id="download" style="display: none;">
+            <h2 class="gradient-text">Download BudgetBasket</h2>
+            <p>Start saving today! Download BudgetBasket on your phone and start managing your grocery budget efficiently.</p>
+            <div class="cta">
+                <button>Download for iOS</button>
+                <button>Download for Android</button>
+            </div>
+        </section>
+
+        <section id="contact" style="display: none;">
+            <h2 class="gradient-text">Contact Us</h2>
+            <p>If you have any questions or suggestions, feel free to reach out to us.</p>
+            <form>
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <div style="text-align: center;">
+                    <button type="submit">Send Message</button>
+                </div></div>
+            </form>
+        </section>
+    </main>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
